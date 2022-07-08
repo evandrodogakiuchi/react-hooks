@@ -23,14 +23,16 @@ const UseEffect = (props) => {
     [number]
   );
 
-
   //Exercise #02
 
-  const [status, setStatus] = useState("odd number")
+  const [status, setStatus] = useState("odd number");
 
-  useEffect(function(){
-    setStatus(number % 2 === 0 ? "even number" : "odd number")
-  }, [number])
+  useEffect(
+    function () {
+      setStatus(number % 2 === 0 ? "even number" : "odd number");
+    },
+    [number]
+  );
 
   return (
     <div className="UseEffect">
@@ -38,8 +40,8 @@ const UseEffect = (props) => {
         title="Hook UseEffect"
         subtitle="Allow you run side effects on functional components."
       />
-      
-      <SectionTitle title="Exercise #01"/>
+
+      <SectionTitle title="Exercise #01" />
       <div className="center">
         <div>
           <span className="text">Fatorial: </span>
@@ -55,12 +57,12 @@ const UseEffect = (props) => {
         />
       </div>
 
-      <SectionTitle title="Exercise #02"/>
+      <SectionTitle title="Exercise #02" />
       <div className="center">
         <div>
-          <span className="text red">Status: </span>
-          <span className="text black">{status}</span>
-        </div> 
+          <span className="text">Status: </span>
+          <span className="text red">{status}</span>
+        </div>
       </div>
     </div>
   );
